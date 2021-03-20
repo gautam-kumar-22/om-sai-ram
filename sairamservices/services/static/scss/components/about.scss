@@ -1,0 +1,40 @@
+.with-medical{
+    @include big-padding();
+    background-color: #FFF;
+    .txtr{
+        padding: 10px;
+        h4{
+            font-size: 32px;
+            span{
+                color: #03509e;
+            }
+        }
+        p{
+            text-indent: 20px;
+            font-size: 1rem;
+            margin-top: 20px;
+            text-align: justify;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                padding: 4px;
+                i{
+                    color: #03509e;
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .count-bx{
+    text-align: center;
+        padding: 50px 30px;
+        background-color: #0d68d2;
+        color: #FFF;
+        margin-top: 30px;
+        h4{
+            color: #ffe823;
+        }
+    }
+}

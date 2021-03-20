@@ -1,0 +1,29 @@
+.key-container{
+  
+   padding-bottom: 60px;
+    .key-row{
+        box-shadow: 0 0 12px 0 rgba(0,0,0,.04);
+        background-color: #FFF;
+        margin-top: -50px;
+        .key-col{
+            padding: 40px;
+            border-right: 1px solid #cccccc59;
+            h2{
+                font-size: 1.5rem;
+                font-family: $mouse-400;
+            }
+            p{
+                text-indent: 20px;
+                font-size: .9rem;
+                margin-bottom: 10px;
+            }
+            a{
+                font-family: $mouse-400;
+                color: #9aca40;
+            }
+        }
+        .no-br{
+            border-right: 0px;
+        }
+    }
+}

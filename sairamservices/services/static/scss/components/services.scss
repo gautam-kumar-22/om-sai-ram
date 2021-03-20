@@ -1,0 +1,29 @@
+.service-container{
+    @include big-padding();
+    background-color: #FFF;
+    .key-row{
+        .key-col{
+            padding: 40px 30px;
+            text-align: center;
+            background-color: #fafafa;
+            margin-bottom: 30px;
+            i{
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                color: #9aca40;
+            }
+            h3{
+                font-family: $mouse-400;
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: .9rem;
+            }
+            a{
+                font-size: .9rem;
+                color: #777;
+                font-family: $mouse-400;
+            }
+        }
+    }
+}

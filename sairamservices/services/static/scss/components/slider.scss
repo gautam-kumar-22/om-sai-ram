@@ -1,0 +1,89 @@
+.banner-container{
+    background-image: url(../images/head_bg.jpg);
+    background-size: 100%;
+    
+    @media screen and (max-width: 699px){
+        background-size: auto;
+    }
+    @media screen and (max-width: 600px){
+        height: 500px;
+    }
+    .slider-det{
+       text-align: center;
+        padding-top: 23%;
+        padding-bottom: 23%;
+        @media screen and (max-width: 600px){
+            padding-top: 38%;
+        }
+        @media screen and (max-width: 409px){
+             padding-top: 43%;
+        }
+        color: #FFF;
+        span{
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        h2{
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            @media screen and (max-width: 409px){
+                font-size: 1.5rem;
+            }
+        }
+        p{
+            font-size: 1rem;
+        }
+        .carousel-indicators{
+            bottom: -51px;
+            
+        }
+        @media screen and (max-width: 600px){
+            .carousel-control-prev-icon{
+                margin-left: -110px;
+            }
+            .carousel-control-next-icon{
+                margin-right: -110px;
+            }
+        }
+        
+    }
+    .carousel-control-prev {
+        left: -120px;
+    }
+    .carousel-control-next {
+        right: -121px;
+    }
+}
+
+.page-title{
+    background-image: url(../images/head_bg.jpg);
+    
+    background-size: 100%;
+    height: 400px;
+    padding-top: 155px;
+    @media screen and (max-width: 699px){
+        background-size: auto;
+    }
+    @media screen and (max-width: 600px){
+        padding-top: 200px;
+    }
+    color: #FFF;
+    h2{
+        text-align: center;
+        width: 100%;
+    }
+    p{
+        width: 100%;
+        text-align: center;
+        font-size: .9rem;
+        margin-top: 10px;
+        i{
+            width: 40px;
+            text-align: center;
+        }
+    }
+}
+.titl-2{
+    padding-top: 205px;
+}

@@ -1,0 +1,126 @@
+{% load static %}<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+        <title>
+            Om Sai Ram Services</title>
+
+        <link rel="shortcut icon" href="{% static 'images/fav.jpg' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawsom-all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+          <style type="text/css">
+              textarea{
+                height: 100px;
+              }
+              select{
+                width: 80%;
+              }
+              @media (min-width: $screen-sm-min) { // this is the 768px breakpoint
+                    .modal-dialog {
+                        max-width: 600px;
+                        width: auto;
+                    }
+                }
+
+                @media (min-width: $screen-md-min) { // this is the 992px breakpoint
+                    .modal-dialog { 
+                        max-width: 800px;
+                    }
+                }
+          </style>
+    </head>
+
+    <body>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <form method='post' class="form" role="form" action="{% url 'enquiry' %}">
+      <div class="modal-body">
+        {% for field in form %}
+            <div class="form-group">
+                <label for="pwd">{{ field.label_tag }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+      </div>
+        <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel" />
+            <input type="submit" class="btn btn-primary" value="Send" style="margin-bottom: 5px;" />
+        </div>
+  </form>
+    </div>
+  </div>
+</div>
+        <!--########################## Header CSS ####################-->
+            <div class="marquee" >
+                <marquee style="background-color: #cacaca; bottom: 0; color: red; position: fixed; text-align: center; z-index: 1;" scrollamount="3" 
+                direction="right" loop="true" behavior="alternate"> 
+                    <img src="{% static 'images/slide-brand-TV.png' %}" alt="Not found">
+                </marquee>
+            </div>
+            <div class="enquiry" data-toggle="modal" data-target="#myModal" >
+                <div style="background-color: #cacaca; right: 0; color: red; position: fixed; text-align: center; z-index: 1;writing-mode: vertical-lr;text-orientation: upright; top: 40%; cursor: pointer;"> 
+                    <strong>ENQUIRY</strong>
+                </div>
+            </div>
+
+        <div class="header-container">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12 left-item">
+                            <ul>
+                                <li>
+                                    <i class="fas fa-envelope-square"></i>
+                                    <a style="color:#FFF;" href="mailto:{{ contact.0.email }}">{{ contact.0.email }}</a></li>
+                                <li class="d-none d-sm-block">
+                                    <i class="fas fa-phone-square"></i>
+                                    {{ contact.0.phone_number }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <nav id="menu-jk" class="container-fluid  no-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 logo">
+                            <img class="log" src="static/images/logo.png" alt="">
+                            <img class="log-gray" src="static/images/logo-gray.png" alt="">
+                            <a data-toggle="collapse" data-target="#nav-head" href="#nav-head">
+                                <i class="fas d-block d-md-none small-menu fa-bars"></i>
+                            </a>
+                        </div>
+                        <div id="nav-head" class="col-md-9 nav-div d-none d-md-block">
+                            <ul>
+                                <li>
+                                    <a class="js-scroll-trigger" href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li>
+                                    <a class="js-scroll-trigger" href="{% url 'about' %}">About Company</a>
+                                </li>
+                                <li class="yc">
+                                    <a class="js-scroll-trigger" href="{% url 'why' %}">Why Choos Us</a>
+                                </li>
+                                <li>
+                                    <a class="js-scroll-trigger" href="{% url 'services' %}">Services</a>
+                                </li>
+
+                                <li>
+                                    <a class="js-scroll-trigger" href="{% url 'contact' %}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+

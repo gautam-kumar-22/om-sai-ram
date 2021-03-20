@@ -1,0 +1,29 @@
+{% load static %}{% include 'partials/header.html' %}
+
+    <!--###################### Page Title Starts Here ############################-->
+
+        <div class="page-title titl-2" {% if details.image %} style="background-image: url({{ details.image.url }})" {% endif %}>
+                <div class="container">
+                    <div class="row">
+                        <h2>{{ object.topic }}</h2>
+                    </div>
+                </div>
+            </div>
+        <!--########################## About US CSS ####################-->
+        <section class="with-medical">
+            <div class="container">
+                <div class="inner-title">
+                    <h2>{{object.topic}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 txtr">
+                        <h4><span>{{ object.topic }}</span></h4>
+                        <p>{{ object.discription|safe }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <!--########################## Footer CSS ####################-->
+       {% include 'partials/footer.html' %}

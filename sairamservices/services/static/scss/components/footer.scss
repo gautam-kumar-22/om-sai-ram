@@ -1,0 +1,87 @@
+.footer-ablove{
+    padding: 30px;
+    background-color: #00ab9f;
+    color: #FFF;
+    font-size: 1.5rem;
+    .btn{
+        float: right;
+        background-color: #FFF;
+        font-family: $mouse-500;
+    }
+}
+
+footer{
+    @include big-padding();
+    background-color: #222;
+    color: #FFF;
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .about{
+        p{
+            font-size: .9em;
+            margin-bottom: 20px;
+        }
+        .foot-address{
+            display: flex;
+            .icon{
+                padding: 20px 10px;
+            }
+            .addet{
+                font-size: .9rem;
+                margin: auto 0px;
+            }
+        }
+    }
+    .fotblog{
+        .blohjb{
+            margin-bottom: 10px;
+            p{
+                font-size: .9rem;
+            }
+            span{
+                font-size: .9rem;
+            }
+        }
+    }
+    .glink{
+        ul{
+            li{
+                padding: 10px;
+                i{
+                    margin-right: 10px;
+                }
+                a{
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .tags{
+        ul{
+            li{
+                float: left;
+                padding: 8px;
+                margin-right: 8px;
+                margin-bottom:8px;
+                border: 1px solid #CCC;
+            }
+        }
+    }
+}
+
+.copy{
+        padding: 20px;
+        background-color: #2E2E2E;
+        color: #FFF;
+    a{
+        color: #FFF;
+    }
+    span{
+        float: right;
+        i{
+            margin-right: 20px;
+        }
+    }
+}

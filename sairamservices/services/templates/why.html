@@ -1,0 +1,42 @@
+{% load static %}{% include 'partials/header.html' %}  
+    <!--###################### Page Title Starts Here ############################-->
+        <div class="page-title titl-2">
+                <div class="container">
+                    <div class="row">
+                        <h2>Why Choos Us</h2>
+                        <p> Home <i class="fas fa-angle-double-right"></i> Why Choos US </p>
+                    </div>
+                </div>
+            </div>
+
+         <!--########################## Key Features CSS ####################-->
+         <div class="key-container container-fluid">
+                <div class="container">
+                    <div class="row key-row">
+                        {% for why in why_slider %}
+                            <div class="col-md-4 key-col">
+                                <h2>{{ why.topic }}</h2>
+                                <p>{{ why.discription|safe }}</p>
+                                <!-- <a href="">Read more</a> -->
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+    
+        <!--########################## Count CSS ####################-->
+        <div id="solution" class="who-we-bg">
+            {% for why in why_us %}
+            <div class="row no-margin">
+                <div class="col-md-6 with-cc">
+                   <img src="{{ why.image.url }}" alt="">
+                </div>
+                <div class="col-md-6 vcbkj">
+                    <h4>{{ why.topic }}</h4>
+                    <p>{{ why.discription|safe }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--########################## Footer CSS ####################-->
+       {% include 'partials/footer.html' %}

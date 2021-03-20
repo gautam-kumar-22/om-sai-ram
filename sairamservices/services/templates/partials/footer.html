@@ -1,0 +1,96 @@
+{% load static %}
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 about">
+                        <h2>Contact Us</h2>
+
+                        <div class="foot-address">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="addet">
+                                {{ contact.0.address }}
+                            </div>
+                        </div>
+                        <div class="foot-address">
+                            <div class="icon">
+                                <i class="far fa-envelope-open"></i>
+                            </div>
+                            <div class="addet">
+                                <a style="color: #FFF;" href="mailto:{{ contact.0.email }}">{{ contact.0.email }}</a>
+                            </div>
+                        </div>
+                        <div class="foot-address">
+                            <div class="icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="addet">
+                                {{ contact.0.phone_number }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 glink">
+                        <ul>
+                            <li>
+                                <a href="{% url 'home' %}">
+                                    <i class="fas fa-angle-double-right"></i>Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}">
+                                    <i class="fas fa-angle-double-right"></i>About Us</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'services' %}">
+                                    <i class="fas fa-angle-double-right"></i>Services</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'why' %}">
+                                    <i class="fas fa-angle-double-right"></i>Why Choose Us</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}">
+                                    <i class="fas fa-angle-double-right"></i>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 glink">
+                        <ul>
+                            <li>
+                                <a href="{{ settings.0.youtube }}" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.0.instagram }}" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.0.twitter }}" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ settings.0.facebook }}" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-md-12" style="text-align: center;">
+                    <span href="#">2021 &copy; All Rights Reserved</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</html>

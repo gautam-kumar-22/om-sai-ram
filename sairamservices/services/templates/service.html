@@ -1,0 +1,30 @@
+{% load static %}{% include 'partials/header.html' %}
+    <!--###################### Page Title Starts Here ############################-->
+        <div class="page-title titl-2">
+                <div class="container">
+                    <div class="row">
+                        <h2>Our Services</h2>
+                        <p> Home <i class="fas fa-angle-double-right"></i> Services </p>
+                    </div>
+                </div>
+            </div>
+<!--########################## Services CSS ####################-->
+<div class="service-container container-fluid">
+        <div class="container ">
+            <div class="row key-row">
+                {% for service in services %}
+                <div class="col-md-4">
+                    <div class="key-col">
+                        <i class="fas fa-desktop"></i>
+                        <h3>{{ service.topic }}</h3>
+                        <p>{{ service.discription|safe }}</p>
+                        <a href="{% url 'service-details' service.id %}">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+   
+    <!--########################## Footer CSS ####################-->
+    {% include 'partials/footer.html' %}

@@ -1,0 +1,39 @@
+{% load static %}{% include 'partials/header.html' %}
+
+    <!--###################### Page Title Starts Here ############################-->
+
+        <div class="page-title titl-2">
+                <div class="container">
+                    <div class="row">
+                        <h2>About Us</h2>
+                        <p> Home <i class="fas fa-angle-double-right"></i> About US </p>
+                    </div>
+                </div>
+            </div>
+        <!--########################## About US CSS ####################-->
+        <section class="with-medical">
+            <div class="container">
+                <div class="inner-title">
+
+                    <h2>About Us</h2>
+                    <p>Take a look at some of our key features</p>
+                </div>
+                {% for about in about_us %}
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-img">
+                            <img src="{{ about.image.url }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 txtr">
+                        <h4><span>{{ about.topic }}</span></h4>
+                        <p>{{ about.discription|safe }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+       
+        <!--########################## Footer CSS ####################-->
+       {% include 'partials/footer.html' %}

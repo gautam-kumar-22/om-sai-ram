@@ -1,0 +1,69 @@
+{% load static %}{% include 'partials/header.html' %}   
+    <!--###################### Page Title Starts Here ############################-->
+
+        <div class="page-title titl-2">
+                <div class="container">
+                    <div class="row">
+                        <h2>Contact US</h2>
+                        <p> Home <i class="fas fa-angle-double-right"></i> Contact Us </p>
+                    </div>
+                </div>
+            </div>
+        
+        
+  <!--###################### Contact US Starts Here ############################-->
+        
+
+        
+            <div style="margin-top:0px;" class="row no-margin">
+        
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112242.22367023978!2d76.96766055329108!3d28.46239135900969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b438cca11f%3A0x2db0bfeebed4a264!2sOm%20Sai%20Ram%20Services!5e0!3m2!1sen!2sin!4v1612371324857!5m2!1sen!2sin" style="width: 100%; height: 400px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                  <div class="row contact-rooo no-margin">
+                    <div class="container">
+                       <div class="row">
+                        <div style="padding:20px" class="col-sm-7">
+                        <h2 >Contact Form</h2> <br>
+                            <form method='post' class="form" role="form" action="{% url 'enquiry' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <table class="table "cellspacing='0' border="0">
+                                    {% for field in form %}
+                                        <div class="form-group">
+                                            {% if field.errors %}
+                                                <ul class="form-errors">
+                                                {% for error in field.errors %}
+                                                    <li><span class="fa fa-exclamation-triangle"></span> <strong>{{ error|escape }}</strong></li>
+                                                {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                            <tr>
+                                                <td style="border: none;">{{ field.label_tag }}</td>
+                                                <td style="border: none;">{{ field }} </td>
+                                            </tr>
+                                            {% if field.help_text %}<div class="form-helptext">{{ field.help_text }}</div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                    </table>
+                                    <input type="hidden" name="url" value="{{ url }}">
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-primary" value="Send" />
+                                </div>
+                            </form>
+
+                        </div>
+                         <div class="col-sm-5">
+                              <div style="margin:50px" class="serv"> 
+                      <h2 style="margin-top:10px;">Address</h2>
+                {{ contact.0.address }}<br>
+                Phone: <a href="tel:{{ contact.0.phone_number }}">{{ contact.0.phone_number }}</a><br>
+                Email:<a href="mailto1:{{ contact.0.email }}">{{ contact.0.email }}</a><br>
+                       </div>    
+                     </div>
+                        </div>
+                    </div>
+                  </div>
+        <!--########################## Footer CSS ####################-->
+       {% include 'partials/footer.html' %}

@@ -1,0 +1,49 @@
+.who-we-bg{
+    
+    .with-cc{
+       padding: 0px;
+        background-color: #9aca40;
+        color: #FFF;
+        p{
+            font-size: 1rem;
+            text-indent: 20px;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                padding:8px 5px;
+                font-size: 1rem;
+                font-family: $mouse-500;
+                i{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .vcbkj{
+        padding: 60px;
+        @media screen and (max-width: 767px){
+            padding: 20px;
+        }
+        background-color: #9aca40;
+        color: #FFF;
+        p{
+            font-size: 1rem;
+            text-indent: 20px;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                padding: 8px 5px;
+                font-size: 1rem;
+                font-family: $mouse-500;
+                i{
+                    margin-right: 10px;
+                }
+                .progress-bar{
+                    background-color: #FFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.blog{
+    padding: 50px;
+    background-color: #FAFAFA;
+    @media screen and (max-width: 990px){
+         padding: 50px 10px;
+    }
+    @media screen and (max-width: 1199px){
+        .container{
+            max-width: 100%;
+        }
+    }
+    .blog-singe{
+        @include card-1();
+        background-color: #FFF;
+        margin-bottom: 30px;
+        .blog-img-tab{
+            padding: 0px;
+            img{
+                width: 100%;
+            }
+        }
+        .blog-content-tab{
+            padding: 10px;
+            h2{
+                font-size: 19px;
+            }
+            i{
+                margin-right: 10px;
+                font-size: 12px;
+                small{
+                    margin-left: 5px;
+                    font-size: 100%;
+                }
+            }
+            .blog-desic{
+                margin-top: 8px;
+                font-size: 12px;
+                text-indent: 20px;
+                margin-bottom: 10px;
+            }
+            a{
+                color: #06b2b6;
+                font-size: 12px;
+                i{
+                    margin-left: 15px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
